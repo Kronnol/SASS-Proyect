@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Kronnol/SASS-Proyect/issues"
   },
-  "homepage": "https://github.com/Kronnol/SASS-Proyect#readme"
+  "homepage": "https://github.com/Kronnol/SASS-Proyect#readme",
+  "devDependencies": {
+    "sass": "^1.49.8"
+  }
 }
