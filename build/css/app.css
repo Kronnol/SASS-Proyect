@@ -1,0 +1,26 @@
+/* Para compilar este archivo se puede hacer desde el package.json, en 
+
+ "scripts": {
+    "sass": "sass src/scss:build/css"
+  },
+luego en la terminal se llama 
+asi : 
+
+npm run sass
+
+luego se agrega al Head de la pagina el link donde quedo 
+
+<link rel="stylesheet" href="build/css/app.css">
+cada vez que se haga un cambio hay que compilar 
+existen los watch que escuchan por los cambios que sucedan en un archivo se agrega de esta manera:
+
+ "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+
+*/
+body {
+  background-color: red;
+}
+
+/*# sourceMappingURL=app.css.map */
