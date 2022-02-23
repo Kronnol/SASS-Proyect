@@ -1,3 +1,7 @@
+/* para incluir los archivos al principal  */
+@import 'base/variables'; //manera vieja de incluir los archivos 
+@import 'contenido/contenido';
+
 
 /* Para compilar este archivo se puede hacer desde el package.json, en 
 
@@ -19,8 +23,18 @@ existen los watch que escuchan por los cambios que sucedan en un archivo se agre
     "sass": "sass --watch src/scss:build/css"
   },
 
-*/
-$rojo: red;
+  para compilar con GULP se hace de la siguiente manera en el archivo GULP
+  /* para evitar estar compilando la hoja de css cada que hagamos un cambio podemos agregar un -watch con gulp de la siguiente manera*/
+/* se crea una funcion  */
+/* function dev(done){
+
+  watch('src/scss/app.scss',css);
+  watch() toma 2 parametros 1.a que archivo le voy a dar el watch 
+                            2. que funcion esta asociada a ese watch
+  done();
+} */
+
+
 
 body{
     background-color: $rojo;
