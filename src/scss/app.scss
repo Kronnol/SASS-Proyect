@@ -1,6 +1,7 @@
 /* para incluir los archivos al principal  */
-@import 'base/variables'; //manera vieja de incluir los archivos 
-@import 'contenido/contenido';
+/* @import 'base';  *///manera vieja de incluir los archivos 
+@use 'base'; /* manera nueva de incluir archivos */
+
 
 
 /* Para compilar este archivo se puede hacer desde el package.json, en 
@@ -34,8 +35,3 @@ existen los watch que escuchan por los cambios que sucedan en un archivo se agre
   done();
 } */
 
-
-
-body{
-    background-color: $rojo;
-}

@@ -1,0 +1,26 @@
+@use 'variables' as v;/* ponemos un alias para no escribir toda la palabra */
+
+html{
+    font-size: 62.5%;/* esto nos habilita que un REM sea igual a 10px */
+    box-sizing: border-box;/* con esto el padding no va a presentarnos un problema  */
+}
+
+*,*:before,*:after{/* con esto el padding no va a presentarnos un problema  */
+    box-sizing: inherit;
+}
+
+body{
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+}
+
+p{
+    font-size: 2rem;
+    color: v.$negro;
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}

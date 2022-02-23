@@ -40,9 +40,16 @@ const sass = require('gulp-sass')(require('sass'));//retorna una sola funcion
     hay que especificarle el archivo de 'sass' que tiene el conocimiento para compilarlo bien 
 */
 
+/* npm i --save-dev gulp-plumber con este comando instalamos plumber 
+
+*/
+const plumber = require('gulp-plumber');
+
+
 function css(done){
     //identificar archivo sass a compilar con gulp
-    src('src/scss/app.scss')
+    src('src/scss/**/*.scss')
+        .pipe(plumber()) // esto lo que hace es evitar que se detenga el watch y siga corriendo aunque hayan errores
         .pipe(sass()) // con el pipe le decimos que esta es la siguiente accion//compilarlo
         .pipe(dest('build/css'));//y aqui//almacenarla   
     done();
@@ -52,7 +59,7 @@ function css(done){
 /* se crea una funcion  */
 function dev(done){
 
-    watch('src/scss/app.scss',css);
+    watch('src/scss/**/*.scss',css);
     //watch() toma 2 parametros//// 1.a que archivo le voy a dar el watch 2. que funcion esta asociada a ese watch
     done();
 }
