@@ -1,7 +1,7 @@
 /* para incluir los archivos al principal  */
 /* @import 'base';  *///manera vieja de incluir los archivos 
 @use 'base'; /* manera nueva de incluir archivos */
-
+@use 'layout';
 
 
 /* Para compilar este archivo se puede hacer desde el package.json, en 
